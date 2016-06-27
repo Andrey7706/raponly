@@ -1,0 +1,243 @@
+@charset "utf-8";
+@keyframes my-anim {
+	
+	0% {margin-left: 20px;}
+	25% {transform: rotateZ(-20deg);}
+	50% {margin-left: 300px;}
+	100% {margin-left: 20px;}
+		
+}
+@-webkit-keyframes my-anim {
+	
+	0% {margin-left: 20px;}
+	25% {transform: rotateZ(-20deg);}
+	50% {margin-left: 300px;}
+	100% {margin-left: 20px;}
+		
+}
+@-o-keyframes my-anim {
+	
+	0% {margin-left: 20px;}
+	25% {transform: rotateZ(-20deg);}
+	50% {margin-left: 300px;}
+	100% {margin-left: 20px;}
+		
+}
+
+/* Основные настройки сайта*/
+body { 
+	font-family: Arial, Tahoma, sans-serif;
+	font-size: 14px;
+	background: #c1c1c1 url(images/bg.png) bottom center no-repeat;
+	background-attachment: fixed;
+	background-size: 1050px 180px;
+	margin: 0;
+}
+
+/* Кнопка фейсбук */
+.facebook {
+	position: fixed;
+	top: 42%;
+	left: -15px;
+	transition: left 0.3s linear;
+}
+.facebook:hover {
+	left: 0px;
+}
+
+/* Основная таблица */
+#main-table {
+	box-shadow: 0px 0px 10px #000;
+}
+
+/* Шапка сайта */
+#header {
+	background: url(images/header.png) top center repeat-x;
+	height: 102px;	
+}
+#logo {
+	background: url(images/logo.png) top center no-repeat;
+	display: block;
+	width: 225px;
+	height: 84px;
+	margin-left: 20px;
+	animation: my-anim 3s linear;
+	-webkit-animation: my-anim 3s linear;
+	-o-animation: my-anim 3s linear;
+}
+#youtube {
+	background: url(images/yt.png) top center no-repeat;
+	display: block;
+	width: 40px;
+	height: 89px;
+	position: relative;
+	left: 770px;
+	bottom: 89px;
+	transition: all 0.3s linear;
+}
+#youtube:hover {
+	transform: rotateZ(90deg);
+}
+
+/* Верхнее меню сайта */
+#menu {
+	background: black;
+	height: 31px;
+}
+#menu a {
+	color: white;
+	text-decoration: none;
+	margin: 0 30px;
+	padding-top: 5px;
+}
+#menu a:hover {
+	color: #d6f507;
+}
+
+/* Контент*/
+#content {
+	background: white;
+	height: 400px;
+	padding: 40px 0;
+	vertical-align: top;
+}
+.news {
+	width: 675px;
+}
+.news img {
+	border-radius: 7px;
+	box-shadow: 3px 3px 5px #535252;
+	opacity: 0.6;
+	transform: opacity 0.3s linear;
+}
+.news img:hover {
+	opacity: 1;
+}
+.news a {
+	color: #c81818;
+	text-decoration: none;
+	font-family: Tahoma, Arial;
+	text-shadow: 1px 1px 3px #535252;
+}
+.news a:hover {
+	text-decoration: underline;
+}
+.news-title a {
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 10px;
+}
+.news-text {
+	margin: 10px 0 10px 10px;
+	text-align: justify;
+}
+.read-more a {
+	font-size: 14px;
+	font-weight: normal;
+	padding-left: 10px;
+}
+.line {
+	text-align: center;
+	margin: 20px 0;
+}
+
+/* Страница концерты */
+#koncerti {
+	width: 90%;
+	height: 350px;
+	color: white;
+}
+#koncerti td {
+	width: 20%;
+	text-align:center;
+	border-right: 1px solid white;
+}
+#koncerti tr:nth-child(odd) {
+	background: #000;
+	transition: background 0.4s linear;
+}
+#koncerti tr:nth-child(odd):hover {
+	background: #dededa;
+	color: white;
+	cursor: pointer;
+}
+#koncerti tr:nth-child(even) {
+	background: #373633;
+	transition: background 0.4s linear;
+}
+#koncerti tr:nth-child(even):hover {
+	background: #8c8c88;
+	color: white;
+	cursor: pointer;
+}
+#koncerti tr:first-child {
+	background: linear-gradient(10deg, #a82f1e 10%, #7e1a0c 80%);
+	font-weight: bold;
+	color: #dfd212;
+}
+#koncerti tr:first-child:hover {
+	background: linear-gradient(10deg, #a82f1e 10%, #7e1a0c 80%);
+	color: #dfd212;
+	cursor: default;
+}
+
+/*#koncerti tr:first-child td {
+	border-radius: 10px 10px 0 0;
+}*/
+
+/*Страница контакта*/
+#contacts {
+	margin: 0 0 0 100px;
+}
+#contacts input, #contacts label {
+	display: block;
+}
+#contacts label {
+	margin-left: 4px;
+	font-size: 11px;
+}
+#contacts textarea {
+	resize: none;
+}
+#contacts input[type=text]:focus {
+	background: #d4d396;
+	color: #fff;
+	border: 2px solid #ccca35;
+}
+#contacts input[type=submit] {
+	border: 0;
+	background: linear-gradient(10deg, #117909 10%, #063a02 80%);
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 5px;
+}
+#contacts input[type=submit]:hover {
+	color: #d6f507;
+}
+
+/* Подвал сайта */
+#footer {
+	background: url(images/footer.png)top center;
+	height: 140px;
+}
+.footer-block {
+	float: left;
+}
+.footer-block a {
+	color: white;
+	text-decoration: none;
+	font-size: 12px;
+	display: block;
+	margin: 2px 50px;
+}
+.footer-block a:hover {
+ 	color: #d6f507;
+ 	text-decoration: underline;
+}
+.footer-line {
+	background: url(images/footer-line.png) top center repeat-y;
+	height: 100px;
+	width: 1px;
+	float: left;
+}
